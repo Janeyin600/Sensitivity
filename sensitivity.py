@@ -374,11 +374,11 @@ def calc_der(distance, matching_atom, radius_atom1, radius_atom2, epsilon_atom1,
     radius_to_dist = radius/distance
     radius_to_dist_pow5 = radius_to_dist**5
     radius_to_dist_pow6 = radius_to_dist_pow5*radius_to_dist
-    rad_der  =  scaling_factor*12.0*epsilon*radius_to_dist_pow5*(radius_to_dist_pow6 - 1)/distance  # A scaling factor of 0.5 for 1-4 van der Waals
+    rad_der  =  scaling_factor*12.0*epsilon*radius_to_dist_pow5*(radius_to_dist_pow6 - 1.0)/distance  # A scaling factor of 0.5 for 1-4 van der Waals
     if matching_atom	== 'atom1': 
-       	eps_der  =  0.5*epsilon_atom2*radius_to_dist_pow6*(0.5*radius_to_dist_pow6 - 1.0)/epsilon
+       	eps_der  =  scaling_factor*epsilon_atom2*radius_to_dist_pow6*(0.5*radius_to_dist_pow6 - 1.0)/epsilon
     else:
-       	eps_der  =  0.5*epsilon_atom2*radius_to_dist_pow6*(0.5*radius_to_dist_pow6 - 1.0)/epsilon
+       	eps_der  =  scaling_factor*epsilon_atom2*radius_to_dist_pow6*(0.5*radius_to_dist_pow6 - 1.0)/epsilon
     
     return rad_der, eps_der
 
