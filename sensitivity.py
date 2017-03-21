@@ -378,7 +378,7 @@ def calc_der(distance, matching_atom, radius_atom1, radius_atom2, epsilon_atom1,
     if matching_atom	== 'atom1': 
        	eps_der  =  scaling_factor*epsilon_atom2*radius_to_dist_pow6*(0.5*radius_to_dist_pow6 - 1.0)/epsilon
     else:
-       	eps_der  =  scaling_factor*epsilon_atom2*radius_to_dist_pow6*(0.5*radius_to_dist_pow6 - 1.0)/epsilon
+       	eps_der  =  scaling_factor*epsilon_atom1*radius_to_dist_pow6*(0.5*radius_to_dist_pow6 - 1.0)/epsilon
     
     return rad_der, eps_der
 
