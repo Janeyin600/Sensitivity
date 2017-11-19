@@ -1,3 +1,3 @@
 # Sensitivity Analysis
 
-Compute the analytical first-order derivatives of binding free energy with respect to GAFF van der Waals parameters
+A Python version of the sensitivity Analysis approach, which computes the analytical first-order derivatives of standard chemical potential with respect to GAFF van der Waals parameters.
